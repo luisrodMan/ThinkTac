@@ -1,0 +1,55 @@
+{
+	"build_systems":
+	[
+		{
+			"cmd":
+			[
+				"c++",
+				"-c",
+				"$file",
+				"-o",
+				"obj/$file_base_name.o",
+				"-I",
+				"../include",
+				"-Wall"
+			],
+			"file_regex": "^ *(.+):([0-9]+):([0-9]+):(.*)$",
+			"name": "Compile cpp",
+			"variants":
+			[
+				{
+					"cmd":
+					[
+						"make"
+					],
+					"file_regex": "^ *(.+):([0-9]+):([0-9]+):(.*)$",
+					"name": "MAKE",
+					"working_dir": "$project_path"
+				},
+				{
+					"cmd":
+					[
+						"game.exe"
+					],
+					"env":
+					{
+						"CHROME_DEVEL_SANDBOX": "/usr/local/sbin/chrome-devel-sandbox"
+					},
+					"name": "RUN",
+					"shell": true,
+					"working_dir": "${project_path}"
+				}
+			],
+			"working_dir": "${file_path}"
+		}
+	],
+	"folders":
+	[
+		{
+			"path": "."
+		},
+		{
+			"path": "C:\\games\\WIZ"
+		}
+	]
+}
