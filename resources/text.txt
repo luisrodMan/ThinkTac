@@ -1,0 +1,5 @@
+<element attrib="xdxd">
+	<child>
+	</child>
+	<childx />
+</element>

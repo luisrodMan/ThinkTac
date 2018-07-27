@@ -1,17 +1,12 @@
-<config>
-	<ball type="normal" maxspeed="200" initialspeed="110"/>
-</config>
-
 <level>
-	<background src="sxdsdsd"/>
-	<layer>
-		<sprite src="sdfds" x="23"/>
-	</layer>
-	<layer>
-		<shoots>
-			<shoot type="normal" x="23" y="dsfsd" />
-		</shoots>
-		<box src="block_1.png" x="233" y="122" rotation="30" />
-		<box src="block_1.png" x="1233" y="122" rotation="30" />
-	</layer>
+	<shoots>
+		<shoot type="normal" x="23" y="dsfsd" />
+	</shoots>
+	<layers>
+		
+		<layer>
+			<artefact type="solid_block" x="233" y="122" rotation="30" />
+			<artefact type="solid_block" x="123" y="122" rotation="30" />
+		</layer>
+	</layers>
 </level>

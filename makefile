@@ -5,12 +5,12 @@
 # obj/*.o: ../WIZ/obj/*.o
 # 	c++ -c -o $@ $<
 
-FLAGS := -std=c++11 -Wall
+FLAGS := -std=c++11 -Wall -I../WIZ/include
 
 objects := $(patsubst %.cpp,obj/%.o, $(wildcard *.cpp))
 
 headers := $(wildcard *.h)
-wizheaders := $(wildcard ../include/WIZ/*.h)
+wizheaders := $(wildcard ../WIZ/include/WIZ/*.h)
 
 # wizobjects := $(patsubst %.cx,%.o,$(wildcard ../WIZ/obj/*.o))
 

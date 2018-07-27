@@ -2,6 +2,7 @@
 
 #include "config.h"
 #include "GameMenuState.h"
+#include "GameLevelState.h"
 
 class TickTackApplication : public DefaultApplication {
 
@@ -16,7 +17,7 @@ public:
 		projection.setToOrtho(0, WIDTH, 0, HEIGHT, 10, -10);
 		batch = new SpriteBatch();
 		batch->setProjectionMatrix(projection);
-		WIZ::getGameStateManager().push(new GameMenuState(batch));
+		WIZ::getGameStateManager().push(new GameLevelState(batch, 1));
 	}
  
 	void sizeChange(int w, int h) {
