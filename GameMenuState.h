@@ -14,6 +14,9 @@ private:
 	Sprite *ball2;
 	Sprite *ballInner;
 
+	Sprite *block1;
+	Sprite *block2;
+
 	PhysicWorld2d world;
 
 public:

@@ -18,14 +18,14 @@ public:
 		batch->setProjectionMatrix(projection);
 		WIZ::getGameStateManager().push(new GameMenuState(batch));
 	}
-
+ 
 	void sizeChange(int w, int h) {
-		Matrix projection;
-		int x=0;
-		int y = 0;
-		WIZ::getGraphics().getViewport(x, y, w, h);
-		projection.setToOrtho(0, w, 0, h, 10, -10);
-		batch->setProjectionMatrix(projection);
+		// Matrix transform;
+		// int x=0; int y = 0;
+		// WIZ::getGraphics().getViewport(x, y, w, h);
+		// float scale = w / (float) WIZ::getGraphics().getGameWidth();
+		// transform.M11 = transform.M22 = scale;
+		// batch->setTransformMatrix(transform);
 	}
 
 	~TickTackApplication() {
